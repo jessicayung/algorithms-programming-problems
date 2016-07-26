@@ -1,3 +1,8 @@
+"""
+Problem 1:
+Find the sum of all multiples of 3 or 5 below a positive integer n
+"""
+
 # Function calculates sum of multiples of k less than n
 def sum_multiples(n,k):
     sum = 0
@@ -13,7 +18,7 @@ def sum_multiples(n,k):
 def sum_multiples_3_5(n):
     return sum_multiples(n,3) + sum_multiples(n,5) - sum_multiples(n,15)
 
-# Read input
+# Read input and solve
 t = int(input().strip())
 for j in range(t):
     n = int(input().strip())
