@@ -1,6 +1,8 @@
 """
 Problem 1:
+
 Find the sum of all multiples of 3 or 5 below a positive integer n
+
 """
 
 # Function calculates sum of multiples of k less than n

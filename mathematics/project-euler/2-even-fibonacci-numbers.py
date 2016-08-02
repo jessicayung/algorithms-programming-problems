@@ -1,6 +1,8 @@
 """
 Problem 2:
+
 Calculate the sum of all even Fibonacci numbers below positive integer n
+
 """
 
 # Function to calculate nth Fibonacci number, n being a non-negative integer.
