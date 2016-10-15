@@ -1,8 +1,11 @@
 """
 A simple function and a unit test to go with it.
+
 Have tested that this returns no errors with the uncommented tests and that
 it returns an AssertionError when the commented (deliberately false) test is included.
 
+Author: Jessica Yung
+October 2016
 """
 
 import unittest
