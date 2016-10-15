@@ -1,5 +1,5 @@
 """
-Problem 6:
+Problem 7:
 
 Find the nth prime number. 
 n=< 10**4
