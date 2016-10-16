@@ -25,7 +25,6 @@ def remove_duplicates(first_node):
     :type first_node: LinkedListNode
     """
 
-    #
     set_of_values = set()
     previous_node = None
     current_node = first_node

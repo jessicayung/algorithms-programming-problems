@@ -4,12 +4,14 @@ Linked Lists in Python
 Taken from InterviewCake August 2016
 """
 
-class LinkedListNode():
-	"""Singly Linked List Nodes"""
-	def __init__(self, value):
-#		super(LinkedListNode, self).__init__()
-		self.value = value
-		self.next = None
+
+class LinkedListNode(object):
+    """Singly Linked List Node"""
+
+    def __init__(self, value):
+        super(LinkedListNode, self).__init__()
+        self.value = value
+        self.next = None
 
 
 # Build a singly linked list
