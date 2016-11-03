@@ -16,7 +16,6 @@ So we should compare the first tuple with every other tuple. And then we can thr
 
 
 """
-import unittest
 
 
 def condense_meeting_times_alt(meeting_times):
@@ -64,6 +63,3 @@ def action_two_tuples(first_index, second_index, tuples_list):
         if second[1] >= first[0]:
             # TODO: list append merged, delete prev
             merge(second_index, first_index)
-
-if __name__ == '__main__':
-    unittest.main()
