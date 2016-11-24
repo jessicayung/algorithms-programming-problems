@@ -1,3 +1,0 @@
-Does list[:i] include the ith element?; No.
-Does list[i:] include the ith element?; Yes.
-What does list[-1] return?; The last element of the list.

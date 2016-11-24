@@ -1,0 +1,27 @@
+How are Negative numbers typically represented in binary?; Using two's complement encoding. In two's complement, the leftmost digit is negative, and the rest of the digits are positive. E.g. 1011 would be -8+2+1 = -5.
+
+
+What is two’s complement encoding?; The leftmost digit is negative, and the rest of the digits are positive. It’s a way of representing negative numbers in binary.
+
+Why is two’s complement used to represent binary numbers (as opposed to one’s complement or sign and magnitude encodings)?; (1) There is only one way to represent zero. (2) Basic operations like addition, subtraction, and multiplication are the same regardless of whether the numbers involved are positive or negative.
+
+
+Bitwise AND; takes two sets of bits and for each pair of bits (the two bits at the same index in each set) returns 11 if both bits are 11. E.g. `5 & 6` is `0101 & 0110` which returns 0100 = 4. 
+
+
+Bitwise 5 | 6; 7, since 0101 or 0110 gives 0111.
+
+
+Bitwise ~ 5 (NOT 5); -6, since ~ 0000 0101 (5) = 1111 1010 (-6).
+
+
+Bitwise 5 ^ 6 (5 XOR 6); 3, since 0101 XOR 0110 gives 0011 = 3. 
+
+
+Bit shifting; Moves each digit in a set of bits left or right. The last bit in the direction of the shift is lost, and a 00 bit is inserted on the other end. E.g. ` 0010 << 1` -> 0100, `1011 >> 1` -> 0101.
+
+
+What do n left shifts do to a binary number?; They multiply the number by 2^n.
+
+
+What do n right shifts do to a binary number?; They divide the number by 2^n, throwing out any remainders.

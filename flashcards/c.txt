@@ -1,0 +1,3 @@
+What does `str = malloc(15)` mean in C?;  Make a string that can hold 15 characters.
+
+
