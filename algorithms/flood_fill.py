@@ -22,16 +22,11 @@ class FloodFill2D:
         """Basic flood fill algorithm that visits every cell in a 2D grid, where adjacent cells are defined as up to eight cells next to the current cell (can move diagonally).
         DFS-based implementation.
         """
-        print("Current cell: ", x, y)
-        print("Steps taken at start", self.steps_taken)
-        print("Visited at start: ", self.visited)
-        print("Steps at start: ", steps)
         if x >= self.grid_width or y >= self.grid_height:
             return
         if x < 0 or y < 0:
             return
         if self.visited[y][x]:
-            print("Already visited ", x, y)
             return
 
         # Mark current cell as visited
