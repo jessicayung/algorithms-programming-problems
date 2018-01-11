@@ -1,4 +1,4 @@
-# programming-problems
+# algorithms-programming-problems
 Notes and code from HackerRank Challenges and other programming problems.
 
 **NOTE: I am working to expand the Algorithms directory. I do not have plans to expand on the other directories in the short term.**
