@@ -8,19 +8,13 @@ Jan 2018
 """
 import numpy as np
 from queue import Queue
+from grid2d import Grid2D
 
-class BFS2D:
+class BFS2D(Grid2D):
 
     def __init__(self, grid_width, grid_height, visited=None):
-        self.grid_width = grid_width
-        self.grid_height = grid_height
-        if visited is None:
-            self.visited = np.zeros((grid_height, grid_width))
-        else:
-            self.visited = visited
-        self.steps_taken = np.zeros((grid_height, grid_width))
+        Grid2D.__init__(self, grid_width, grid_height, visited)
         self.queue = Queue()
-
 
     def bfs(self, x, y, steps=0):
         """Breadth-First Search algorithm that visits every cell in a 2D grid, where adjacent cells are defined as up to eight cells next to the current cell (can move diagonally).
@@ -58,13 +52,6 @@ class BFS2D:
                     self.visited[cell[1], cell[0]] = True
                     self.steps_taken[celly, cellx] = steps
                     steps += 1
-
-    def neighbour(self, x, y):
-        neighbours = []
-        for dx in [-1,0,1]:
-            for dy in [-1,0,1]:
-                neighbours.append([x + dx, y + dy])
-        return neighbours
 
 bfs = BFS2D(4, 3)
 bfs.bfs(1,2)
