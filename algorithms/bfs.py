@@ -17,7 +17,7 @@ class BFS2D(Grid2D):
         self.queue = Queue()
 
     def bfs(self, x, y, steps=0):
-        """Breadth-First Search algorithm that visits every cell in a 2D grid, where adjacent cells are defined as up to eight cells next to the current cell (can move diagonally).
+        """Breadth-First Search algorithm that visits every cell in a 2D grid.
         """
         if x >= self.grid_width or y >= self.grid_height:
             return
