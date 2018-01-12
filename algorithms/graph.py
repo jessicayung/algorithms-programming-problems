@@ -10,6 +10,9 @@ class Graph:
     def __init__(self, adjacency_matrix, num_vertices):
         self.adj_mat = adjacency_matrix
         self.v = num_vertices
+        self.visited = np.zeros(self.v)
+        self.steps_taken = -1*np.ones(self.v)
+        self.steps = 0
 
     def is_adjacent(self, v1, v2):
         return self.adj_mat[v1, v2]
@@ -42,13 +45,40 @@ class Graph:
             j = edge[1]
             self.adj_mat[i][j] = self.adj_mat[j][i] = 1
 
+    def neighbour(self, vertex):
+        return np.nonzero(self.adj_mat[vertex])[0]
+
+    def dfs(self, start):
+        print("at vertex", start)
+        if self.visited[start]:
+            print("Already visited")
+            return
+
+        print("mark as visited")
+        # Mark current cell as visited
+        self.visited[start] = True
+        self.steps_taken[start] = self.steps
+        self.steps += 1
+        print(self.visited)
+
+        # Visit every neighbouring cell
+        for cell in self.neighbour(start):
+            self.dfs(cell)
+
 
 
 # Test Graph class
 # t1 = Graph([[1,1,1,0],[1,1,0,0],[1,0,1,0],[0,0,0,1]], 4)
 # print(t1.find_num_islands())
 
-# t2 = Graph(np.zeros((6,6)),6)
-# edges = [[0,5],[2,4],[2,3],[3,4]]
-# t2.add_edges(edges)
-# print(t2.find_num_islands())
+def test2():
+    t2 = Graph(np.zeros((6,6)),6)
+    edges = [[0,5],[2,4],[2,3],[3,4]]
+    t2.add_edges(edges)
+    print("Num islands:", t2.find_num_islands())
+    print("Neighbours of vertex 0", t2.neighbour(0))
+    print("Neighbours of vertex 3", t2.neighbour(3))
+    t2.dfs(2)
+    print(t2.steps_taken)
+
+# test2()
