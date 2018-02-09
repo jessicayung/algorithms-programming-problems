@@ -1,5 +1,7 @@
 # Algorithms
 
+Algorithms implemented in Python. Implementations of machine learning algorithms can be found in the directory `machine-learning`.
+
 Algorithms implemented:
 - Breadth-first search `bfs.py`
 - Depth-first search `dfs.py`
