@@ -1,0 +1,28 @@
+What does 'first class object' mean?;
+
+egs of first-class objects in Python; Functions, classes.
+
+Is Python interpreted or compiled?; interpreted.
+
+typing of Python; dynamically typed (vs statically typed, specify types)
+
+does Python have access specifiers?; No. (e.g. C++'s public, private. bc 'we are all adults here'.)
+
+compiled vs interpreted languages; - compiled: (compiled code) can be executed directly in the CPU's 'native' language. - interpreted: must be translated at runtime from original format to CPU machine instructions
+
+Deep vs shallow copy; -Shallow copy copies reference pointers and changes to copied will change original. Faster. - Deep copy copies values but not reference pointers, is slower.
+
+Deep copy; Stores values copied separately. - Doesn't copy reference pointers. - Changes made in copy won't affect original etc. - Slower than shallow copy.
+
+Shallow copy; Copies reference pointers just like it copies values. - Changes made will also affect the original. - faster execution that depends on data size(?)
+
+lists vs tuples; lists are mutable, tuples are not.
+
+How multithreading is done in Python; - Global Interpreter Lock (GIL): makes sure only one thread executes at a time. Thread acquires GIL, does some work, then passes GIL onto next thread. - i.e. take turns using same CPU core. - GIL passing adds overhead to execution (slower)
+
+example of ternary operator; 5 if x > 4 else 4
+
+Memory management in Python; 
+
+Sources:
+- https://www.edureka.co/blog/interview-questions/python-interview-questions/
